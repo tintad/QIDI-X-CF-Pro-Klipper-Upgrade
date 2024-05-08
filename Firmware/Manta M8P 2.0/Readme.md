@@ -20,3 +20,5 @@ If want to set low, input "!PD14,!PF8"
 4. make at home/pi/klipper/out/klipper.bin
 make clean
 make
+
+5.

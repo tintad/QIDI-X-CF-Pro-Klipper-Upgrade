@@ -1,0 +1,20 @@
+0.
+Press BOOT0 and RESET
+1.
+lsusb
+2.
+cd ~/klipper
+3.
+make menuconfig
+4.
+make
+5.
+make flash FLASH_DEVICE=0483:df11
+or
+sudo dfu-util -a 0 -D ~/klipper/out/klipper.bin --dfuse-address 0x08002000:leave -d 0483:df11
+
+
+* Erase MCU
+sudo dfu-util -a 0 -D ~/klipper/out/klipper.bin --dfuse-address 0x08000000:force:mass-erase -d 0483:df11
+
+
